@@ -1,20 +1,54 @@
 {
   "name": "@sixphere/lit-element",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Vitamined element based on LitElement.",
-  "main": "index.js",
-  "module": "index.js",
+  "main": "pkg/dist-web/index.bundled.js",
+  "module": "pkg/dist-web/index.bundled.js",
   "sideEffects": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "pika-web"
+    "prepare": "pack build",
+    "postinstall": "pack build"
   },
-  "author": "",
+  "author": "Sixphere Technologies",
   "license": "MIT",
   "dependencies": {
     "lit-element": "^2.1.0"
   },
   "devDependencies": {
-    "@pika/web": "^0.4.2"
-  }
+    "@pika/web": "^0.4.2",
+    "@pika/plugin-build-web": "^0.4.0",
+    "@pika/plugin-bundle-web": "^0.4.0",
+    "@pika/plugin-standard-pkg": "^0.4.0"
+  },
+  "@pika/web": {
+    "webDependencies": [
+      "lit-element"
+    ]
+  },
+  "@pika/pack": {
+    "pipeline": [
+      [
+        "@pika/plugin-standard-pkg"
+      ],
+      [
+        "@pika/plugin-build-web"
+      ],
+      [
+        "@pika/plugin-bundle-web"
+      ]
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/6phere/lit-element.git"
+  },
+  "keywords": [
+    "lit-element",
+    "binding"
+  ],
+  "bugs": {
+    "url": "https://github.com/6phere/lit-element/issues"
+  },
+  "homepage": "https://github.com/6phere/lit-element#readme"
 }

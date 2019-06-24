@@ -1,5 +1,5 @@
-import { LitElement } from '/web_modules/lit-element.js';
-export * from '/web_modules/lit-element.js';
+import { LitElement } from 'lit-element';
+export * from 'lit-element';
 
 /**
  * Add camel case function to the string prototype

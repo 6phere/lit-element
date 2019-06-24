@@ -1,0 +1,35 @@
+{
+  "name": "@sixphere/lit-element",
+  "description": "Vitamined element based on LitElement.",
+  "version": "1.1.0",
+  "license": "MIT",
+  "files": [
+    "dist-*/",
+    "bin/"
+  ],
+  "pika": true,
+  "sideEffects": true,
+  "keywords": [
+    "lit-element",
+    "binding"
+  ],
+  "homepage": "https://github.com/6phere/lit-element#readme",
+  "bugs": {
+    "url": "https://github.com/6phere/lit-element/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/6phere/lit-element.git"
+  },
+  "dependencies": {
+    "lit-element": "^2.1.0"
+  },
+  "devDependencies": {
+    "@pika/web": "^0.4.2",
+    "@pika/plugin-build-web": "^0.4.0",
+    "@pika/plugin-bundle-web": "^0.4.0",
+    "@pika/plugin-standard-pkg": "^0.4.0"
+  },
+  "esnext": "dist-src/index.js",
+  "module": "dist-web/index.js"
+}
