@@ -1,14 +1,14 @@
 {
   "name": "@sixphere/lit-element",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Vitamined element based on LitElement.",
   "main": "pkg/dist-web/index.bundled.js",
+  "esnext": "pkg/dist-src/index.js",
   "module": "pkg/dist-web/index.bundled.js",
   "sideEffects": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "pack build",
-    "postinstall": "pack build"
+    "prepare": "pack build"
   },
   "author": "Sixphere Technologies",
   "license": "MIT",
@@ -20,11 +20,6 @@
     "@pika/plugin-build-web": "^0.4.0",
     "@pika/plugin-bundle-web": "^0.4.0",
     "@pika/plugin-standard-pkg": "^0.4.0"
-  },
-  "@pika/web": {
-    "webDependencies": [
-      "lit-element"
-    ]
   },
   "@pika/pack": {
     "pipeline": [
